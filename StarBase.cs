@@ -12,7 +12,7 @@ namespace StarWars
         private int _DeltaY;
         
 
-        public StarBase(Point Position, Point Speed, Size Size, bool isEnemy) : base(Position, Speed, Size, isEnemy)
+        public StarBase(Point Position, Point Speed, Size Size) : base(Position, Speed, Size)
         {
         }
 

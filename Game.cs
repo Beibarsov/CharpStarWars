@@ -1,5 +1,6 @@
 ﻿//using System;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -15,12 +16,15 @@ namespace StarWars
 
 
         private static GameObject[] __GameObjects;
+        private static List<Asteroid> __Asteroids;
         private static Bullet __Bullet;
         private static StarShip __Ship;
         private static EnergyTank __EnergyTank;
         //Надписи
         private static LabelGame __ScoreCount;
         private static LabelGame __EnergeCount;
+        //Количество астероидов на уровне
+        private static int __asteroidCount = 0;
 
         public static int Width { get; set; }
         public static int Height { get; set; }
@@ -93,28 +97,32 @@ namespace StarWars
 
 
 
-                __GameObjects = new GameObject[40];
+                __GameObjects = new GameObject[20];
                 //Звездочки
-                for (int i = 0; i < __GameObjects.Length / 2; i++)
+                for (int i = 0; i < __GameObjects.Length -1; i++)
                 {
-                    __GameObjects[i] = new Star(new Point(600, 15 + i * 27), new Point(5 + i, 25 - i), new Size(15, 15), false);
+                    __GameObjects[i] = new Star(new Point(600, 15 + i * 27), new Point(5 + i, 25 - i), new Size(15, 15));
 
                 }
                 //Звездная база
-                for (int i = __GameObjects.Length / 2; i < __GameObjects.Length / 2 + 1; i++)
+                for (int i = __GameObjects.Length -1; i < __GameObjects.Length; i++)
                 {
-                    __GameObjects[i] = new StarBase(new Point(300, 200), new Point(1, 1), new Size(200, 200), true);
+                    __GameObjects[i] = new StarBase(new Point(300, 200), new Point(1, 1), new Size(200, 200));
 
                 }
                 //Астероиды
-                for (int i = __GameObjects.Length / 2 + 1; i < __GameObjects.Length; i++)
-                {
-                    __GameObjects[i] = new Asteroid(new Point(600, 50 - i), new Point(15 - i, 25 - i), new Size(30 + i, 40 + i), true);
-                }
+                LoadAsteroid();
 
-                __Bullet = new Bullet(new Point(20, 200), new Point(5, 0), new Size(20, 20));
-                __Ship = new StarShip(new Point(20, 200), new Point(0, 0), new Size(50, 50), false);
-                __EnergyTank = new EnergyTank(new Point(20, 400), new Point(0, 0), new Size(50, 50), false);
+                
+
+                //for (int i = __GameObjects.Length / 2 + 1; i < __GameObjects.Length; i++)
+                //{
+                //    __GameObjects[i] = new Asteroid(new Point(600, 50 - i), new Point(15 - i, 25 - i), new Size(30 + i, 40 + i), true);
+                //}
+
+                __Bullet = new Bullet(new Point(20, 200), new Point(15, 0), new Size(40, 40));
+                __Ship = new StarShip(new Point(20, 200), new Point(0, 0), new Size(50, 50));
+                __EnergyTank = new EnergyTank(new Point(20, 400), new Point(0, 0), new Size(50, 50));
 
                 //надпись подсчета очков
                 __ScoreCount = new LabelGame("Очков: ", new Point(450, 10));
@@ -129,6 +137,17 @@ namespace StarWars
                 MessageBox.Show(ex.Message);
                 MessageBox.Show("Приложение будет закрыто");
                 Application.Exit();
+            }
+        }
+        /// <summary>
+        /// Загрузка астероидов, создание коллекции
+        /// </summary>
+        private static void LoadAsteroid()
+        {
+            __Asteroids = new List<Asteroid>();
+            for (int i = 0; i <= __asteroidCount; i++)
+            {
+                __Asteroids.Add(new Asteroid(new Point(600, 50 - i), new Point(15 - i, 25 - i), new Size(30 + i, 40 + i)));
             }
         }
 
@@ -151,6 +170,10 @@ namespace StarWars
             {
                 __GameObjects[i]?.Draw();
             }
+            foreach(var ast in __Asteroids)
+            {
+                ast?.Draw();
+            }
             __Bullet?.Draw();
             __Ship.Draw();
             __EnergyTank.Draw();
@@ -167,46 +190,51 @@ namespace StarWars
         /// </summary>
         private static void Update(Message message)
         {
-
-
+            if (__Asteroids.Count == 0)
+            {
+                __asteroidCount++;
+                LoadAsteroid();
+            }
             for (int i = 0; i < __GameObjects.Length; i++)
             {
-                
+
                 if (__GameObjects[i] == null) continue;
                 var game_object = __GameObjects[i];
                 game_object?.Update();
+            }
+            for (int i = 0; i < __Asteroids.Count; i++)
+            {
+                
+                if (__Asteroids[i] == null) continue;
+                __Asteroids[i]?.Update();
                 //Проверка на столкновения
                 //Пулей со враждебным объектом
-                if (__Bullet != null && __Bullet.Colision(game_object))
+                if (__Bullet != null && __Bullet.Colision(__Asteroids[i]))
                 {
-                    if (game_object._isEnemy)
-                    {
-
                         System.Media.SystemSounds.Hand.Play();
                         Score++;
                         _message = message;
-                        _message?.Invoke("Попал по " + game_object.ToString());
-                        __GameObjects[i] = null;
+                        _message?.Invoke("Попал по " + __Asteroids[i].ToString());
+                    __Asteroids.RemoveAt(i);
                         __Bullet = null;
-                        //logger.Do("Ту-ту-ру");
-                        //game_object.Die();
                         continue;
-                    }
-
                 }
-                //Кораблем с аптечкой
-
                 //Астероида (или иного враждебного) с кораблем
-                if (__Ship.Colision(game_object))
+                if (__Ship.Colision(__Asteroids[i]))
                 {
-                    if (game_object._isEnemy)
-                    {
                         __Ship.Energy--;
                         _message = message;
-                        _message?.Invoke("В тебя попали " + game_object.ToString());
-                    }
+                        _message?.Invoke("В тебя попали " + __Asteroids[i].ToString());
+                        continue;
                 }
+
+
+               
+
+                
+                
             }
+            //Кораблем с аптечкой
             if (__Ship.Colision(__EnergyTank))
             {
                 __Ship.Energy += __EnergyTank.EnergyCount;
@@ -246,7 +274,7 @@ namespace StarWars
             switch (args.KeyCode)
             {
                 case Keys.ControlKey:
-                    __Bullet = new Bullet(__Ship.Position, new Point(5, 0), new Size(20, 20));
+                    __Bullet = new Bullet(__Ship.Position, new Point(15, 0), new Size(40, 20));
                     break;
                 case Keys.W:
                     __Ship.Up();

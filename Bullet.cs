@@ -13,7 +13,7 @@ namespace StarWars
 
 
         public Bullet(Point Position, Point Speed, Size Size)
-    : base(Position, Speed, Size, false) { }
+    : base(Position, Speed, Size) { }
 
         public override void Draw()
         {

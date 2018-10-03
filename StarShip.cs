@@ -21,7 +21,7 @@ namespace StarWars
         {
             Energy -= n;
         }
-        public StarShip(Point _Position, Point _Speed, Size _Size, bool _IsEnemy) : base(_Position, _Speed, _Size, _IsEnemy)
+        public StarShip(Point _Position, Point _Speed, Size _Size) : base(_Position, _Speed, _Size)
         {
         }
 

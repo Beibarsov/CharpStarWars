@@ -1276,3 +1276,99 @@
 20:28:35 Подобрал StarWars.EnergyTank
 20:28:35 Подобрал StarWars.EnergyTank
 20:28:36 Подобрал StarWars.EnergyTank
+19:14:03 Попал по StarWars.StarBase
+19:23:52 Попал по StarWars.Asteroid
+19:24:31 Попал по StarWars.Asteroid
+19:25:28 Попал по StarWars.Asteroid
+19:25:53 Попал по StarWars.Asteroid
+19:29:23 Попал по StarWars.Asteroid
+19:42:10 Попал по StarWars.Asteroid
+19:42:13 Попал по StarWars.Asteroid
+19:42:13 Попал по StarWars.Asteroid
+19:42:15 Попал по StarWars.Asteroid
+19:42:16 Попал по StarWars.Asteroid
+19:42:18 Попал по StarWars.Asteroid
+19:42:19 Попал по StarWars.Asteroid
+19:42:20 Попал по StarWars.Asteroid
+19:42:23 Попал по StarWars.Asteroid
+19:42:24 Попал по StarWars.Asteroid
+19:42:29 Попал по StarWars.Asteroid
+19:42:32 Попал по StarWars.Asteroid
+19:42:38 Попал по StarWars.Asteroid
+19:42:40 Попал по StarWars.Asteroid
+19:43:15 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:16 Подобрал StarWars.EnergyTank
+19:43:17 Попал по StarWars.Asteroid
+19:43:36 Попал по StarWars.Asteroid
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 Подобрал StarWars.EnergyTank
+19:43:37 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:38 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:40 В тебя попали StarWars.Asteroid
+19:43:41 В тебя попали StarWars.Asteroid
+19:43:41 В тебя попали StarWars.Asteroid
+19:43:41 В тебя попали StarWars.Asteroid
+19:47:44 Попал по StarWars.Asteroid
+19:47:51 В тебя попали StarWars.Asteroid
+19:47:51 В тебя попали StarWars.Asteroid
+19:47:52 В тебя попали StarWars.Asteroid
+19:47:52 Попал по StarWars.Asteroid
+19:47:52 В тебя попали StarWars.Asteroid
+19:47:52 В тебя попали StarWars.Asteroid
+19:47:52 В тебя попали StarWars.Asteroid
+19:47:52 В тебя попали StarWars.Asteroid
+19:48:02 Попал по StarWars.Asteroid
+19:49:11 В тебя попали StarWars.Asteroid
+19:49:11 В тебя попали StarWars.Asteroid
+19:49:11 В тебя попали StarWars.Asteroid
+19:49:52 Попал по StarWars.Asteroid
+19:51:08 Попал по StarWars.Asteroid
+19:52:34 Попал по StarWars.Asteroid
+19:55:09 Попал по StarWars.Asteroid
+19:56:28 В тебя попали StarWars.Asteroid
+19:56:28 В тебя попали StarWars.Asteroid
+19:56:28 В тебя попали StarWars.Asteroid
+19:56:28 В тебя попали StarWars.Asteroid
+19:56:30 Попал по StarWars.Asteroid
+19:56:34 Попал по StarWars.Asteroid
+19:56:42 Попал по StarWars.Asteroid
+19:56:46 Попал по StarWars.Asteroid
+19:56:51 Попал по StarWars.Asteroid
+19:56:56 В тебя попали StarWars.Asteroid
+19:56:56 Попал по StarWars.Asteroid

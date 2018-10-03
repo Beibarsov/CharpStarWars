@@ -16,12 +16,11 @@ namespace StarWars
         //Делегат для событий
         public delegate void Message();
 
-        public GameObject(Point Position, Point Speed, Size Size,  bool IsEnemy)
+        public GameObject(Point Position, Point Speed, Size Size)
         {
             _Position = Position;
             _Speed = Speed;
             _Size = Size;
-            _isEnemy = IsEnemy;
             if (_Size.Height < 0 || _Size.Width < 0)
                 throw new GameObjectException("Неправильный размер объекта");
             if (Math.Abs(_Speed.X) > 100 || Math.Abs(_Speed.Y) > 100)

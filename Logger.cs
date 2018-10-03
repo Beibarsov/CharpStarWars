@@ -21,7 +21,6 @@ namespace StarWars
                 file.WriteLine(DateTime.Now.ToLongTimeString() +" " + message);
             }
             Console.WriteLine(message);
-            Console.Sho
         }
     }
 }

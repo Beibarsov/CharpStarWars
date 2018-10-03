@@ -11,7 +11,7 @@ namespace StarWars
     {
         public int EnergyCount { get; set; }
 
-        public EnergyTank(Point _Position, Point _Speed, Size _Size, bool _IsEnemy) : base(_Position, _Speed, _Size, _IsEnemy)
+        public EnergyTank(Point _Position, Point _Speed, Size _Size) : base(_Position, _Speed, _Size)
         {
             EnergyCount = 2;
         }

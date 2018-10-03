@@ -9,8 +9,8 @@ namespace StarWars
 
         Image image = Image.FromFile(@"Images\Star.png");
 
-        public Star(Point Position, Point Speed, Size Size, bool isEnemy)
-            : base(Position, Speed, Size, isEnemy) { }
+        public Star(Point Position, Point Speed, Size Size)
+            : base(Position, Speed, Size) { }
          
         public override void Draw()
         {
